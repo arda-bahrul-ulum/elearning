@@ -80,6 +80,108 @@ elearning/
 │   └── Dockerfile
 ├── docker-compose.yml        # Multi-container setup
 └── README.md
+
+backend/
+├── cmd/
+│   └── server/
+│       └── main.go                 # Application entry point
+├── internal/
+│   ├── config/
+│   │   └── config.go              # Configuration management
+│   ├── database/
+│   │   ├── connection.go          # Database connection
+│   │   └── migrations/            # SQL migration files
+│   ├── models/
+│   │   ├── user.go               # User model
+│   │   ├── course.go             # Course model
+│   │   ├── lesson.go             # Lesson model
+│   │   ├── enrollment.go         # Enrollment model
+│   │   ├── quiz.go               # Quiz model
+│   │   ├── payment.go            # Payment model
+│   │   └── notification.go       # Notification model
+│   ├── repositories/
+│   │   ├── interfaces/
+│   │   │   ├── user_repository.go
+│   │   │   ├── course_repository.go
+│   │   │   ├── lesson_repository.go
+│   │   │   ├── enrollment_repository.go
+│   │   │   ├── quiz_repository.go
+│   │   │   ├── payment_repository.go
+│   │   │   └── notification_repository.go
+│   │   └── implementations/
+│   │       ├── user_repository.go
+│   │       ├── course_repository.go
+│   │       ├── lesson_repository.go
+│   │       ├── enrollment_repository.go
+│   │       ├── quiz_repository.go
+│   │       ├── payment_repository.go
+│   │       └── notification_repository.go
+│   ├── services/
+│   │   ├── interfaces/
+│   │   │   ├── auth_service.go
+│   │   │   ├── user_service.go
+│   │   │   ├── course_service.go
+│   │   │   ├── lesson_service.go
+│   │   │   ├── enrollment_service.go
+│   │   │   ├── quiz_service.go
+│   │   │   ├── payment_service.go
+│   │   │   ├── media_service.go
+│   │   │   └── notification_service.go
+│   │   └── implementations/
+│   │       ├── auth_service.go
+│   │       ├── user_service.go
+│   │       ├── course_service.go
+│   │       ├── lesson_service.go
+│   │       ├── enrollment_service.go
+│   │       ├── quiz_service.go
+│   │       ├── payment_service.go
+│   │       ├── media_service.go
+│   │       └── notification_service.go
+│   ├── handlers/
+│   │   ├── auth_handler.go
+│   │   ├── user_handler.go
+│   │   ├── course_handler.go
+│   │   ├── lesson_handler.go
+│   │   ├── enrollment_handler.go
+│   │   ├── quiz_handler.go
+│   │   ├── payment_handler.go
+│   │   ├── media_handler.go
+│   │   └── admin_handler.go
+│   ├── middleware/
+│   │   ├── auth.go               # JWT authentication
+│   │   ├── cors.go               # CORS handling
+│   │   ├── logger.go             # Request logging
+│   │   └── rate_limiter.go       # Rate limiting
+│   ├── utils/
+│   │   ├── jwt.go                # JWT utilities
+│   │   ├── hash.go               # Password hashing
+│   │   ├── email.go              # Email utilities
+│   │   ├── s3.go                 # S3 utilities
+│   │   └── validator.go          # Input validation
+│   └── workers/
+│       ├── media_processor.go    # Media processing worker
+│       ├── email_worker.go       # Email sending worker
+│       └── notification_worker.go # Notification worker
+├── migrations/
+│   ├── 000001_create_users.up.sql
+│   ├── 000001_create_users.down.sql
+│   ├── 000002_create_courses.up.sql
+│   ├── 000002_create_courses.down.sql
+│   └── ...
+├── pkg/
+│   ├── logger/
+│   │   └── logger.go             # Structured logging
+│   └── cache/
+│       └── redis.go              # Redis cache client
+├── scripts/
+│   ├── migrate.sh                # Migration script
+│   └── seed.sql                  # Database seeding
+├── tmp/                          # Temporary file uploads
+├── Dockerfile
+├── go.mod
+├── go.sum
+├── .env.example
+└── README.md
 ```
 
 ## 🚦 Getting Started
