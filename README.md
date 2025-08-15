@@ -80,9 +80,11 @@ elearning/
 │   └── Dockerfile
 ├── docker-compose.yml        # Multi-container setup
 └── README.md
+```
 
 ## Backend Structure
 
+```
 backend/
 ├── cmd/
 │   └── server/
@@ -184,8 +186,11 @@ backend/
 ├── go.sum
 ├── .env.example
 └── README.md
+```
 
 ## Frontend Structure
+
+```
 frontend/
 ├── public/
 │   ├── index.html
