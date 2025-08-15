@@ -81,6 +81,8 @@ elearning/
 ├── docker-compose.yml        # Multi-container setup
 └── README.md
 
+## Backend Structure
+
 backend/
 ├── cmd/
 │   └── server/
@@ -180,6 +182,120 @@ backend/
 ├── Dockerfile
 ├── go.mod
 ├── go.sum
+├── .env.example
+└── README.md
+
+## Frontend Structure
+frontend/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── assets/
+│       └── images/
+├── src/
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Header.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Layout.jsx
+│   │   │   ├── Loading.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   ├── Pagination.jsx
+│   │   │   └── SearchBar.jsx
+│   │   ├── auth/
+│   │   │   ├── LoginForm.jsx
+│   │   │   ├── RegisterForm.jsx
+│   │   │   ├── ForgotPassword.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   ├── course/
+│   │   │   ├── CourseCard.jsx
+│   │   │   ├── CourseGrid.jsx
+│   │   │   ├── CourseDetail.jsx
+│   │   │   ├── CoursePlayer.jsx
+│   │   │   ├── CourseSidebar.jsx
+│   │   │   └── CreateCourse.jsx
+│   │   ├── lesson/
+│   │   │   ├── LessonList.jsx
+│   │   │   ├── LessonPlayer.jsx
+│   │   │   ├── VideoPlayer.jsx
+│   │   │   └── ProgressBar.jsx
+│   │   ├── quiz/
+│   │   │   ├── QuizCard.jsx
+│   │   │   ├── QuizTaker.jsx
+│   │   │   ├── QuizResults.jsx
+│   │   │   └── CreateQuiz.jsx
+│   │   ├── dashboard/
+│   │   │   ├── StudentDashboard.jsx
+│   │   │   ├── InstructorDashboard.jsx
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   └── StatsCard.jsx
+│   │   └── ui/
+│   │       ├── Button.jsx
+│   │       ├── Input.jsx
+│   │       ├── Select.jsx
+│   │       ├── Card.jsx
+│   │       ├── Badge.jsx
+│   │       └── Alert.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Courses.jsx
+│   │   ├── CourseDetail.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Profile.jsx
+│   │   ├── MyCourses.jsx
+│   │   ├── admin/
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   ├── ManageUsers.jsx
+│   │   │   ├── ManageCourses.jsx
+│   │   │   └── Analytics.jsx
+│   │   └── instructor/
+│   │       ├── InstructorDashboard.jsx
+│   │       ├── CreateCourse.jsx
+│   │       ├── EditCourse.jsx
+│   │       └── Students.jsx
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   ├── useApi.js
+│   │   ├── useCourses.js
+│   │   ├── useLocalStorage.js
+│   │   └── useDebounce.js
+│   ├── services/
+│   │   ├── api.js
+│   │   ├── auth.js
+│   │   ├── courses.js
+│   │   ├── users.js
+│   │   ├── payments.js
+│   │   └── upload.js
+│   ├── store/
+│   │   ├── index.js
+│   │   ├── authSlice.js
+│   │   ├── coursesSlice.js
+│   │   ├── uiSlice.js
+│   │   └── userSlice.js
+│   ├── utils/
+│   │   ├── constants.js
+│   │   ├── helpers.js
+│   │   ├── validation.js
+│   │   ├── formatters.js
+│   │   └── storage.js
+│   ├── styles/
+│   │   ├── globals.css
+│   │   ├── components.css
+│   │   └── utilities.css
+│   ├── assets/
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── videos/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── router.jsx
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── Dockerfile
 ├── .env.example
 └── README.md
 ```
